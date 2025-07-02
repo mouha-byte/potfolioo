@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt";
+import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -16,54 +16,56 @@ const EducationCard = ({
   date,
   points,
 }) => (
-  <Tilt className='xs:w-[320px] w-full'>
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full violet-gradient p-[1px] rounded-[20px] shadow-card'
+  <Tilt
+  tiltMaxAngleX={45}
+  tiltMaxAngleY={45}
+  scale={1}
+  transitionSpeed={450}
+  className='xs:w-[320px] w-full'
+>
+  <motion.div
+    variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+    className='w-full violet-gradient p-[1px] rounded-[20px] shadow-card'
+  >
+    <div
+      className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[320px] flex justify-evenly items-start flex-col'
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[320px] flex justify-evenly items-start flex-col'
-      >
-        <div className='flex items-center gap-4 mb-4'>
-          <div
-            className='w-16 h-16 rounded-full flex justify-center items-center'
-            style={{ backgroundColor: iconBg }}
-          >
-            <img
-              src={icon}
-              alt={school_name}
-              className='w-10 h-10 object-contain'
-            />
-          </div>
-          <div>
-            <h3 className='text-white text-[20px] font-bold leading-tight'>
-              {title}
-            </h3>
-            <p className='text-secondary text-[14px] font-semibold'>
-              {school_name}
-            </p>
-            <p className='text-[#915EFF] text-[12px] font-medium'>{date}</p>
-          </div>
+      <div className='flex items-center gap-4 mb-4'>
+        <div
+          className='w-16 h-16 rounded-full flex justify-center items-center'
+          style={{ backgroundColor: iconBg }}
+        >
+          <img
+            src={icon}
+            alt={school_name}
+            className='w-10 h-10 object-contain'
+          />
         </div>
-
-        <ul className='list-disc ml-5 space-y-2'>
-          {points.map((point, pointIndex) => (
-            <li
-              key={`education-point-${pointIndex}`}
-              className='text-white-100 text-[12px] pl-1 tracking-wider leading-relaxed'
-            >
-              {point}
-            </li>
-          ))}
-        </ul>
+        <div>
+          <h3 className='text-white text-[20px] font-bold leading-tight'>
+            {title}
+          </h3>
+          <p className='text-secondary text-[14px] font-semibold'>
+            {school_name}
+          </p>
+          <p className='text-[#915EFF] text-[12px] font-medium'>{date}</p>
+        </div>
       </div>
-    </motion.div>
-  </Tilt>
+
+      <ul className='list-disc ml-5 space-y-2'>
+        {points.map((point, pointIndex) => (
+          <li
+            key={`education-point-${pointIndex}`}
+            className='text-white-100 text-[12px] pl-1 tracking-wider leading-relaxed'
+          >
+            {point}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </motion.div>
+</Tilt>
+
 );
 
 const Education = () => {
