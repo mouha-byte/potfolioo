@@ -84,9 +84,9 @@ const Education = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-center mx-auto'
       >
-        My educational background has provided me with a strong foundation in
-        computer science principles and practical development skills. Here are the
-        key milestones in my learning journey.
+        My educational background gave me a solid foundation in computer science, software engineering, and embedded systems.
+ I gained hands-on experience in real-world projects, combining theory with practice in mobile development, IoT, and backend systems.
+ Here are the key milestones of my learning journey:
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10 justify-center'>

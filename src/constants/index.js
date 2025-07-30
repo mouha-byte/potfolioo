@@ -35,6 +35,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "projects",
+    title: "Projects",
+  },
+  {
     id: "education",
     title: "Education",
   },
@@ -46,19 +50,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Flutter Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: " IoT & Embedded Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: " Backend Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "UI/UX & Prototyping",
     icon: creator,
   },
 ];
@@ -120,179 +124,203 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Freelancer Flutter",
+    company_name: "Indépendant",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "9 mois",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Conception et développement de 6 applications full stack multiplateformes (mobile, web, desktop) avec Flutter.",
+      "Création d’interfaces utilisateur performantes et réactives adaptées aux besoins clients.",
+      "Mise en place de bases de données locales (SQLite) et cloud (Firebase), gestion de l’authentification, des paiements et de l’impression via Bluetooth.",
+      "Déploiement et livraison professionnelle pour des systèmes de caisse intelligents utilisés en conditions réelles.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "Stage ouvrier - 1ère année ingénierie",
+    company_name: "UDGroup",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "2 mois",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Développement d’une application web moderne pour la gestion des artisans (planning, fiches, contacts, services).",
+      "Architecture MERN : Next.js pour le front-end, MongoDB pour la persistance, API REST sécurisées.",
+      "Mise en œuvre d’un système de filtrage, tri et recherche dynamique pour améliorer l'expérience utilisateur.",
+      "Déploiement de la solution sur un environnement cloud pour tests en conditions réelles.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
+    title: "Projet PFE Licence – Maison Intelligente",
+    company_name: "Yazaki Bizerte",
     icon: shopify,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "6 mois",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Développement d’un système domotique intelligent pour surveiller et sécuriser un environnement résidentiel.",
+      "Capteurs IoT pour la température/humidité, contrôle d’accès biométrique (empreinte digitale et reconnaissance faciale).",
+      "Envoi automatique d’alertes via module GSM en cas d’anomalie détectée.",
+      "Dashboard interactif sur Node-RED pour visualisation en temps réel, communication entre microcontrôleur et base locale SQLite.",
     ],
   },
 ];
+
 
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Mouhanned est un étudiant sérieux et passionné. Il a mené un projet innovant en intégrant plusieurs technologies avancées.",
+    name: "Abdelaziz Sahbani",
+    designation: "Professeur universitaire",
+    company: "ISIMS",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "J’ai collaboré avec Mouhanned dans un cadre académique et professionnel. C’est un profil polyvalent, impliqué et compétent.",
+    name: "Abderrahim Ncir",
+    designation: "Étudiant master recherche & Associé",
+    company: "Projet entrepreneurial",
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "En entreprise, Mouhanned a su rapidement s’adapter aux besoins de notre projet. Il a apporté des solutions fiables et efficaces.",
+    name: "Développeur Yazaki",
+    designation: "Développeur",
+    company: "Yazaki Bizerte",
+    image: "https://randomuser.me/api/portraits/men/15.jpg",
   },
 ];
 
+
 const projects = [
   {
-    name: "Car Rent",
+    name: "Plateforme Événements Environnementaux",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Conception d’une plateforme de gestion des événements environnementaux (Design Thinking) avec Flutter.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "ux", color: "green-text-gradient" },
     ],
     image: carrent,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Gestion des Hôtels",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Application mobile et web Flutter pour la gestion complète des hôtels (réservation, chambres, gestion clients).",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "firebase", color: "green-text-gradient" },
     ],
     image: jobit,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Annonce 3D",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Création et animation d’une annonce publicitaire en 3D avec 3ds Max pour un projet de communication visuelle.",
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+      { name: "3dsmax", color: "blue-text-gradient" },
+      { name: "animation", color: "pink-text-gradient" },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Gestion Événements",
+    description:
+      "Application web pour gérer les événements, développée avec Spring Boot, XML, HTML5 et CSS3.",
+    tags: [
+      { name: "springboot", color: "blue-text-gradient" },
+      { name: "html5", color: "green-text-gradient" },
+      { name: "css3", color: "pink-text-gradient" },
+    ],
+    image: carrent,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Système de Traduction & Sécurité",
+    description:
+      "Prototype pour aider les personnes sourdes via un système de traduction et sécuriser leur habitat.",
+    tags: [
+      { name: "iot", color: "blue-text-gradient" },
+      { name: "cv", color: "green-text-gradient" },
+    ],
+    image: jobit,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Maison Intelligente",
+    description:
+      "Projet PFE complet de maison connectée : contrôle d’accès, capteurs, alertes GSM et tableau de bord interactif.",
+    tags: [
+      { name: "flutter", color: "blue-text-gradient" },
+      { name: "sqlite", color: "green-text-gradient" },
+      { name: "node-red", color: "pink-text-gradient" },
     ],
     image: tripguide,
     source_code_link: "https://github.com/",
   },
 ];
 
+
 const education = [
   {
-    title: "Bachelor of Computer Science",
-    school_name: "University of Technology",
-    icon: starbucks, // You can replace with a university icon
+    title: "Cycle Ingénieur en Informatique - Génie Logiciel",
+    school_name: "ISIMS (Institut Supérieur d’Informatique et de Mathématiques de Monastir)",
+    icon: starbucks, // remplace avec une icône d’université
     iconBg: "#383E56",
-    date: "2018 - 2022",
+    date: "2025 - maintenant",
     points: [
-      "Studied fundamental computer science concepts including algorithms, data structures, and software engineering.",
-      "Completed coursework in web development, database management, and mobile application development.",
-      "Participated in coding competitions and hackathons to enhance practical skills.",
-      "Graduated with honors and received Dean's List recognition for academic excellence.",
+      "Spécialisation en génie logiciel, IoT, systèmes embarqués et cybersécurité.",
+      "Développement d'applications Flutter (web, mobile, desktop) avec intégration de capteurs, GSM, RFID et dashboard Node-RED.",
+      "Projet de fin d’étude : maison intelligente avec surveillance, contrôle d’accès et alertes automatisées.",
+      "Utilisation de technologies comme SQLite, GSM module, reconnaissance faciale et empreinte digitale.",
     ],
   },
   {
-    title: "Full Stack Web Development Bootcamp",
-    school_name: "Coding Academy",
-    icon: tesla, // You can replace with a bootcamp icon
+    title: "Licence en Ingénierie des Systèmes Informatiques",
+    school_name: "FSB (Faculté des Sciences de Bizerte)",
+    icon: tesla,
     iconBg: "#E6DEDD",
-    date: "2022 - 2023",
+    date: "2021 - 2024",
     points: [
-      "Intensive program focused on modern web development technologies and frameworks.",
-      "Built multiple full-stack applications using React, Node.js, and MongoDB.",
-      "Learned industry best practices for code quality, testing, and deployment.",
-      "Completed capstone project showcasing end-to-end development skills.",
+      "Spécialisation en systèmes embarqués et IoT.",
+      "Réalisation de projets comme : système de sécurité pour personnes sourdes, gestion d’événements, gestion d’hôtels (Flutter, Spring Boot).",
+      "Stage chez YAZAKI : conception d’un système de surveillance embarqué (température, humidité, contrôle d’accès).",
+      "Participation active à des clubs tech : SmarTech, Art of Code, Enactus.",
+    ],
+  },
+  {
+    title: "Certifications Techniques & Projets Professionnels",
+    school_name: "Diverses plateformes (Coursera, PEEC, Google, IBM)",
+    icon: tesla, // mettre une icône de diplôme ou de certification
+    iconBg: "#383E56",
+    date: "2021 - 2024",
+    points: [
+      "🔐 Cyber Security Fundamentals – University of London (Coursera)",
+      "🐍 Python for Data Science, AI & Development – IBM (Coursera)",
+      "🌐 Création d’un site web avec WordPress",
+      "🤖 Robotique – niveau 1 & 2 (FSB Innovation)",
+      "🧠 Étudiant Entrepreneur (PEEC) – 2 fois",
+      "🖥️ Technical Support Fundamentals – Google (en cours)",
+      "⌨️ Certificat FastTyping – vitesse de frappe",
+      "🏆 Organisation de la compétition FSB-Robots 3.0",
+    ],
+  },
+  {
+    title: "Baccalauréat – Sciences Expérimentales",
+    school_name: "Lycée secondaire – Tunisie",
+    icon: tesla,
+    iconBg: "#E6DEDD",
+    date: "2020",
+    points: [
+      "Mention : assez bien",
+      "Bonnes bases scientifiques et logiques, début en électronique et programmation.",
     ],
   },
 ];
+
 
 export { services, technologies, experiences, testimonials, projects, education };
