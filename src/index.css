@@ -321,6 +321,36 @@
     align-items: center;
     gap: 0.5rem;
   }
+  
+  /* Projects mobile optimizations */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+  /* Disable animations for projects on mobile */
+  .projects-mobile-simple {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* Optimize project cards layout */
+  .project-card-mobile {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Reduce motion for better performance */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
 @media (max-width: 480px) {

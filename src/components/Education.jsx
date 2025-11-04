@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -16,20 +15,12 @@ const EducationCard = ({
   date,
   points,
 }) => (
-  <Tilt
-    tiltMaxAngleX={45}
-    tiltMaxAngleY={45}
-    scale={1}
-    transitionSpeed={450}
+  <motion.div
+    variants={fadeIn("right", "spring", index * 0.5, 0.75)}
     className='xs:w-[320px] w-full'
   >
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full violet-gradient p-[1px] rounded-[20px] shadow-card'
-    >
-      <div
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[320px] flex justify-evenly items-start flex-col'
-      >
+    <div className='w-full violet-gradient p-[1px] rounded-[20px] shadow-card hover:scale-105 transition-transform duration-300'>
+      <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[320px] flex justify-evenly items-start flex-col'>
         <div className='flex items-center gap-4 mb-4'>
           <div
             className='w-16 h-16 rounded-full flex justify-center items-center'
@@ -63,8 +54,8 @@ const EducationCard = ({
           ))}
         </ul>
       </div>
-    </motion.div>
-  </Tilt>
+    </div>
+  </motion.div>
 );
 
 const MobileEducationCard = ({ education, onClick }) => {

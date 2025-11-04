@@ -385,6 +385,11 @@
       }
       
       @media (max-width: 480px) {
+        .social-links {
+  right: 5px;
+  bottom: 130px;
+  gap: 8px;
+}
         .profile-container {
           bottom: 70px;
           gap: 10px;
@@ -443,6 +448,14 @@
       
       /* Landscape mobile */
       @media (max-width: 768px) and (orientation: landscape) {
+        .social-links {
+  top: 50%;
+  bottom: auto;
+  right: 10px;
+  transform: translateY(-50%);
+  flex-direction: column;  /* Gardez column au lieu de row */
+  gap: 8px;
+}
         .profile-container {
           bottom: 10px;
           right: 10px;
@@ -461,13 +474,14 @@
           padding: 3px 6px;
         }
         
-        .social-links {
-          top: 50%;
-          right: 10px;
-          transform: translateY(-50%);
-          flex-direction: row;
-          gap: 8px;
-        }
+       .social-links {
+  bottom: 140px;
+  top: auto;
+  right: 10px;
+  transform: none;
+  flex-direction: column;
+  gap: 10px;
+}
         
         .social-link {
           width: 30px;

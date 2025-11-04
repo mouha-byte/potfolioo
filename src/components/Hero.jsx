@@ -8,21 +8,15 @@ const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Vérifier si c'est un appareil mobile
     const mediaQuery = window.matchMedia("(max-width: 768px)");
-
-    // Définir la valeur initiale
     setIsMobile(mediaQuery.matches);
 
-    // Fonction de callback pour gérer les changements
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    // Ajouter l'écouteur d'événement
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    // Nettoyer l'écouteur
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
@@ -43,14 +37,14 @@ const Hero = () => {
             Hi, I'm <span className='text-[#915EFF]'>Mouhanned</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Software engineer & freelancer crafting apps,<br className='sm:block hidden' />
-            and engineering IoT and embedded solutions
+            I develop Flutter apps, IoT systems <br className='sm:block hidden' />
+            and embedded solutions
           </p>
         </div>
       </div>
 
-      {/* Afficher le canvas 3D seulement sur desktop */}
-      {!isMobile && <ComputersCanvas />}
+      {/* Toujours afficher le canvas 3D sur desktop */}
+      <ComputersCanvas />
 
       {/* Image de remplacement pour mobile */}
       {isMobile && (
