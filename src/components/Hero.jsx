@@ -54,8 +54,8 @@ const Hero = () => {
 
       {/* Image de remplacement pour mobile */}
       {isMobile && (
-        <div className='absolute inset-0 flex items-center justify-center mt-20'>
-          <div className='relative w-full max-w-md mx-auto px-6'>
+        <div className='absolute inset-0 flex items-end justify-center pb-32 md:pb-40'>
+          <div className='relative w-full max-w-xs mx-auto px-6'>
             <div className='relative'>
               <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur-3xl opacity-30 animate-pulse'></div>
               <img 
