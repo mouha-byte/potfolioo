@@ -1,9 +1,33 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Vérifier si c'est un appareil mobile
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+    // Définir la valeur initiale
+    setIsMobile(mediaQuery.matches);
+
+    // Fonction de callback pour gérer les changements
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    // Ajouter l'écouteur d'événement
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    // Nettoyer l'écouteur
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -22,12 +46,27 @@ const Hero = () => {
             Software engineer & freelancer crafting apps,<br className='sm:block hidden' />
             and engineering IoT and embedded solutions
           </p>
-          
-
         </div>
       </div>
 
-      <ComputersCanvas />
+      {/* Afficher le canvas 3D seulement sur desktop */}
+      {!isMobile && <ComputersCanvas />}
+
+      {/* Image de remplacement pour mobile */}
+      {isMobile && (
+        <div className='absolute inset-0 flex items-center justify-center mt-20'>
+          <div className='relative w-full max-w-md mx-auto px-6'>
+            <div className='relative'>
+              <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur-3xl opacity-30 animate-pulse'></div>
+              <img 
+                src='/logo.svg' 
+                alt='Developer' 
+                className='relative w-full h-auto object-contain animate-float'
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
