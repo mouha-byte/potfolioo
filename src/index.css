@@ -245,7 +245,39 @@
   }
 }
 
-/* Mobile Responsive Improvements */
+/* Technology icons styles */
+.tech-icon-simple {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-icon-simple:hover {
+  transform: translateY(-5px);
+}
+
+.tech-icon-simple:active {
+  transform: translateY(-2px) scale(0.95);
+}
+
+/* Animate tech icons on mobile */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tech-icon-animate {
+  animation: popIn 0.4s ease-out forwards;
+}
+
+/* Mobile tech section improvements */
 @media (max-width: 768px) {
   * {
     scroll-behavior: smooth;
@@ -274,6 +306,20 @@
   /* Adjust hero mobile image position */
   .hero-mobile-image {
     padding-bottom: 8rem;
+  }
+
+  .tech-grid-mobile {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .tech-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
   }
 }
 
