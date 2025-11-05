@@ -59,7 +59,7 @@ const Contact = () => {
     } catch (error) {
       setLoading(false);
       console.error("Error:", error);
-      alert("Oops! Something went wrong. Please try again later.");
+      alert("Oops! Something went wrong. Please try again later. " + error+data.error);
     }
   };
 
